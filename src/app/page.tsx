@@ -1,3 +1,23 @@
+"use client";
+
+import Navigation from "@/components/Navigation";
+import HeroSection from "@/components/Hero";
+import AboutSection from "@/components/About";
+import SkillsSection from "@/components/Skills";
+import CompanySection from "@/components/Company";
+import ActivitiesSection from "@/components/Activities";
+import FooterSection from "@/components/Footer";
+
 export default function Home() {
-  return <div></div>;
+  return (
+    <>
+      <Navigation />
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <CompanySection />
+      <ActivitiesSection />
+      <FooterSection />
+    </>
+  );
 }
