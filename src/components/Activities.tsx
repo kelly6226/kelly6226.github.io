@@ -4,7 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import { colors } from "@/styles/colors";
-import Font from "./Font";
+import { Font } from "@/styles/Typography";
 
 export default function ActivitiesSection() {
   const [activeTab, setActiveTab] = React.useState<"personal" | "team">(

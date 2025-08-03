@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import { colors } from "@/styles/colors";
-import Font from "./Font";
+import { Font } from "@/styles/Typography";
 
 const SkillsSection = () => {
   const skills = [
