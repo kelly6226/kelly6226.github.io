@@ -28,7 +28,7 @@ const ExtraInfo = () => {
           영여영문학과 / 컴퓨터공학과{" "}
         </Span>
         <Span display="flex">
-          <I className="fas fa-calendar-check"></I> 2022.02 졸업
+          <I className="fas fa-calendar-check"></I> 2024.08 졸업
           <div style={{ margin: "0 8px" }}>|</div>
           <I className="fas fa-star"></I> 학점 3.8/4.5
         </Span>

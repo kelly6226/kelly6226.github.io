@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import BasicTheme from "@/styles/breakpoints";
@@ -9,9 +9,7 @@ const { colors } = BasicTheme;
 import { Div, A } from "@/styles/BaseStyledTags";
 
 export default function ActivitiesSection() {
-  const [activeTab, setActiveTab] = React.useState<"personal" | "team">(
-    "personal"
-  );
+  const [activeTab, setActiveTab] = useState<"personal" | "team">("personal");
 
   return (
     <Activities>
