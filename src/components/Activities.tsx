@@ -3,8 +3,10 @@
 import React from "react";
 import styled from "styled-components";
 import Image from "next/image";
-import { colors } from "@/styles/colors";
-import { Div, A } from "@/styles/BseStyledTags";
+import BasicTheme from "@/styles/breakpoints";
+
+const { colors } = BasicTheme;
+import { Div, A } from "@/styles/BaseStyledTags";
 
 export default function ActivitiesSection() {
   const [activeTab, setActiveTab] = React.useState<"personal" | "team">(

@@ -2,19 +2,21 @@
 
 import styled from "styled-components";
 import Image from "next/image";
-import { colors } from "@/styles/colors";
-import { Div, A, Span, H1, P } from "@/styles/BseStyledTags";
+import { Div, A, Span, H1, P } from "@/styles/BaseStyledTags";
 import { CenterColumn, CenterRow } from "@/styles/BaseComponents";
+import BasicTheme from "@/styles/breakpoints";
+
+const { colors } = BasicTheme;
 
 const ProfileSection = () => {
   return (
     <Container
       id="about"
       width="100vw"
-      p={{ zero: "80px 0 32px", lg: "128px 0 64px" }}
+      p={{ zero: "80px 0 32px", md: "128px 0 64px" }}
       textAlign="center"
     >
-      <Content p={{ zero: "16px", lg: "32px" }} width="100%">
+      <Content p={{ zero: "16px", md: "32px" }} width="100%">
         <CenterRow mb="32px" width="180px" height="180px">
           <ProfileImg
             src="/jisooProfile.jpeg"
@@ -23,13 +25,13 @@ const ProfileSection = () => {
             height={180}
           />
         </CenterRow>
-        <Title fontSize={{ zero: "24px", lg: "32px" }}>
+        <Title fontSize={{ zero: "24px", md: "32px" }}>
           안녕하세요 <br />
           프론트엔드 개발자 <Span color={colors.black}>신지수</Span>
           입니다
         </Title>
         <P
-          fontSize={{ zero: "14px", lg: "16px" }}
+          fontSize={{ zero: "14px", md: "16px" }}
           maxWidth="600px"
           margin="0 auto 32px"
           opacity="0.8"
@@ -46,7 +48,7 @@ const ProfileSection = () => {
           gridGap="16px"
           mb="16px"
           width="100%"
-          flexDirection={{ zero: "column", lg: "row" }}
+          flexDirection={{ zero: "column", md: "row" }}
         >
           <Btn
             href="mailto:kelly6226@naver.com"

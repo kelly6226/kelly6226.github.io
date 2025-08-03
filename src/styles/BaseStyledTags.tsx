@@ -22,21 +22,11 @@ import {
   space,
   typography,
 } from "styled-system";
-import { breakpoints } from "@/styles/breakpoints";
+import BasicTheme from "@/styles/breakpoints";
 
 export interface ITypoProps {
   typo?: string;
 }
-
-// styled-system에 breakpoints 설정
-const theme = {
-  breakpoints: [
-    breakpoints.zero,
-    breakpoints.sm,
-    breakpoints.md,
-    breakpoints.lg,
-  ],
-};
 
 const styles = compose(
   color,
@@ -185,5 +175,4 @@ export {
   Span,
   TextArea,
   Ul,
-  theme,
 };

@@ -1,13 +1,15 @@
 "use client";
 
 import styled from "styled-components";
-import { colors } from "@/styles/colors";
+import BasicTheme from "@/styles/breakpoints";
+
+const { colors } = BasicTheme;
 
 const Navigation = () => {
   return (
     <Navbar>
       <NavContainer>
-        <NavLogo>김개발</NavLogo>
+        <NavLogo>신지수</NavLogo>
         <NavMenu>
           <li>
             <NavLink href="#about">About</NavLink>
