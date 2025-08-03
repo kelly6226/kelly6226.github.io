@@ -21,13 +21,22 @@ import {
   position,
   space,
   typography,
-  variant,
 } from "styled-system";
-import { Config } from "@/styles/FontVariants";
+import { breakpoints } from "@/styles/breakpoints";
 
 export interface ITypoProps {
   typo?: string;
 }
+
+// styled-system에 breakpoints 설정
+const theme = {
+  breakpoints: [
+    breakpoints.zero,
+    breakpoints.sm,
+    breakpoints.md,
+    breakpoints.lg,
+  ],
+};
 
 const styles = compose(
   color,
@@ -38,9 +47,9 @@ const styles = compose(
   border,
   space,
   typography,
-  background,
-  variant(Config)
+  background
 );
+
 export interface ITagProps
   extends ColorProps,
     FlexboxProps,
@@ -60,6 +69,34 @@ const A = styled.a<ITagProps>`
 const Div = styled.div<ITagProps>`
   ${styles}
   white-space: pre-line;
+`;
+
+const H1 = styled.h1<ITagProps>`
+  ${styles}
+`;
+
+const H2 = styled.h2<ITagProps>`
+  ${styles}
+`;
+
+const H3 = styled.h3<ITagProps>`
+  ${styles}
+`;
+
+const H4 = styled.h4<ITagProps>`
+  ${styles}
+`;
+
+const H5 = styled.h5<ITagProps>`
+  ${styles}
+`;
+
+const H6 = styled.h6<ITagProps>`
+  ${styles}
+`;
+
+const P = styled.p<ITagProps>`
+  ${styles}
 `;
 
 const Img = styled.img<ITagProps>`
@@ -128,4 +165,25 @@ export function withStyle<T = object>(Component: React.ComponentType<T>) {
   `;
 }
 
-export { A, Button, Div, I, Img, Input, Li, Ol, Option, Span, TextArea, Ul };
+export {
+  A,
+  Button,
+  Div,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  I,
+  Img,
+  Input,
+  Li,
+  Ol,
+  Option,
+  P,
+  Span,
+  TextArea,
+  Ul,
+  theme,
+};

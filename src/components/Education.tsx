@@ -2,88 +2,62 @@
 
 import styled from "styled-components";
 import { colors } from "@/styles/colors";
-import { Font } from "@/styles/Typography";
+import { Div, Span } from "@/styles/BseStyledTags";
 
 export default function EducationSection() {
   return (
     <Education>
       <Container>
-        <SectionTitle>
-          <Font typo="section_title">Education & Language</Font>
-        </SectionTitle>
+        <SectionTitle>Education & Language</SectionTitle>
         <EducationGrid>
           <EducationCard>
             <CardHeader>
               <i className="fas fa-graduation-cap"></i>
               <div>
-                <Font typo="card_title" as="h3">
-                  한국대학교
-                </Font>
-                <Font typo="caption" as="p">
-                  컴퓨터공학과
-                </Font>
+                <h3>한국대학교</h3>
+                <p>컴퓨터공학과</p>
               </div>
             </CardHeader>
             <EducationDetails>
-              <Font typo="body_regular" as="p">
+              <p>
                 <strong>학위:</strong> 공학사
-              </Font>
-              <Font typo="body_regular" as="p">
+              </p>
+              <p>
                 <strong>졸업:</strong> 2022.02
-              </Font>
-              <Font typo="body_regular" as="p">
+              </p>
+              <p>
                 <strong>학점:</strong> 3.8/4.5
-              </Font>
-              <Font typo="body_regular" as="p">
+              </p>
+              <p>
                 <strong>주요 과목:</strong> 자료구조, 알고리즘, 웹프로그래밍,
                 데이터베이스
-              </Font>
+              </p>
             </EducationDetails>
           </EducationCard>
           <EducationCard>
             <CardHeader>
               <i className="fas fa-language"></i>
               <div>
-                <Font typo="card_title" as="h3">
-                  어학 능력
-                </Font>
-                <Font typo="caption" as="p">
-                  Language Skills
-                </Font>
+                <h3>어학 능력</h3>
+                <p>Language Skills</p>
               </div>
             </CardHeader>
             <LanguageSkills>
               <LanguageItem>
-                <Font typo="caption" as="span">
-                  TOEIC
-                </Font>
-                <Score>
-                  <Font typo="badge">850점</Font>
-                </Score>
+                <span>TOEIC</span>
+                <Score>850점</Score>
               </LanguageItem>
               <LanguageItem>
-                <Font typo="caption" as="span">
-                  TOEIC Speaking
-                </Font>
-                <Score>
-                  <Font typo="badge">Level 6</Font>
-                </Score>
+                <span>TOEIC Speaking</span>
+                <Score>Level 6</Score>
               </LanguageItem>
               <LanguageItem>
-                <Font typo="caption" as="span">
-                  영어 회화
-                </Font>
-                <Level>
-                  <Font typo="badge">Intermediate</Font>
-                </Level>
+                <span>영어 회화</span>
+                <Level>Intermediate</Level>
               </LanguageItem>
               <LanguageItem>
-                <Font typo="caption" as="span">
-                  기술 문서 독해
-                </Font>
-                <Level>
-                  <Font typo="badge">Advanced</Font>
-                </Level>
+                <span>기술 문서 독해</span>
+                <Level>Advanced</Level>
               </LanguageItem>
             </LanguageSkills>
           </EducationCard>
@@ -113,46 +87,46 @@ const Container = styled.div`
 `;
 
 const Section = styled.section`
-  padding: 4rem 0;
+  padding: 64px 0;
 
   @media (max-width: 768px) {
-    padding: 3rem 0;
+    padding: 48px 0;
   }
 
   @media (max-width: 480px) {
-    padding: 2rem 0;
+    padding: 32px 0;
   }
 `;
 
 const SectionTitle = styled.h2`
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
   color: ${colors.black};
 
   @media (max-width: 768px) {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 32px;
+    margin-bottom: 32px;
   }
 
   @media (max-width: 480px) {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+    font-size: 28px;
+    margin-bottom: 32px;
   }
 
   @media (max-width: 360px) {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 `;
 
 const Education = styled(Section)`
-  background-color: ${colors.white};
+  background-color: ${colors.veryLightGray};
   color: ${colors.darkText};
 `;
 
 const EducationGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 32px;
   max-width: 800px;
   margin: 0 auto;
 
@@ -163,58 +137,76 @@ const EducationGrid = styled.div`
 
 const EducationCard = styled.div`
   background: ${colors.white};
-  padding: 2rem;
-  border-radius: 1rem;
+  padding: 32px;
+  border-radius: 16px;
   box-shadow: 0 4px 6px -1px ${colors.shadow};
   border: 1px solid ${colors.borderLight};
 
   @media (max-width: 768px) {
-    padding: 1.5rem;
+    padding: 24px;
   }
 
   @media (max-width: 480px) {
-    padding: 1rem;
+    padding: 16px;
   }
 `;
 
 const CardHeader = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 16px;
+  margin-bottom: 24px;
 
   i {
-    font-size: 2rem;
+    font-size: 32px;
     color: ${colors.darkText};
 
     @media (max-width: 480px) {
-      font-size: 1.5rem;
+      font-size: 24px;
     }
   }
 
   h3 {
-    margin-bottom: 0.25rem;
+    margin-bottom: 4px;
+    font-size: 32px;
+    font-weight: 600;
 
     @media (max-width: 480px) {
-      font-size: 1rem;
+      font-size: 20px;
     }
   }
 
   p {
     color: ${colors.lightText};
+    font-size: 14px;
 
     @media (max-width: 480px) {
-      font-size: 0.75rem;
+      font-size: 12px;
     }
   }
 `;
 
 const EducationDetails = styled.div`
-  p {
-    margin-bottom: 0.5rem;
+  margin-bottom: 8px;
+
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: ${colors.darkText};
 
     @media (max-width: 480px) {
-      font-size: 0.75rem;
+      font-size: 16px;
+    }
+  }
+
+  p {
+    color: ${colors.lightText};
+    font-size: 14px;
+    margin-bottom: 8px;
+
+    @media (max-width: 480px) {
+      font-size: 12px;
     }
   }
 `;
@@ -223,20 +215,13 @@ const LanguageSkills = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-
-  @media (max-width: 480px) {
-    gap: 0.5rem;
-  }
 `;
 
 const LanguageItem = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  @media (max-width: 480px) {
-    font-size: 0.75rem;
-  }
+  font-size: 0.875rem;
 `;
 
 const Score = styled.span`
@@ -244,14 +229,8 @@ const Score = styled.span`
   color: ${colors.white};
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
-
-  @media (max-width: 480px) {
-    padding: 0.125rem 0.5rem;
-  }
-
-  @media (max-width: 360px) {
-    padding: 0.125rem 0.375rem;
-  }
+  font-size: 0.75rem;
+  font-weight: 500;
 `;
 
 const Level = styled.span`
@@ -259,12 +238,6 @@ const Level = styled.span`
   color: ${colors.gray};
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
-
-  @media (max-width: 480px) {
-    padding: 0.125rem 0.5rem;
-  }
-
-  @media (max-width: 360px) {
-    padding: 0.125rem 0.375rem;
-  }
+  font-size: 0.75rem;
+  font-weight: 500;
 `;

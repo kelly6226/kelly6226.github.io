@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 import { colors } from "@/styles/colors";
-import { Font } from "@/styles/Typography";
+import { Div, Span } from "@/styles/BseStyledTags";
 
 const SkillsSection = () => {
   const skills = [
@@ -32,90 +32,181 @@ const SkillsSection = () => {
 
   return (
     <Skills>
-      <div className="container">
-        <SectionTitle>
-          <Font typo="section_title">Skills & Languages</Font>
-        </SectionTitle>
-        <SkillsGrid>
-          {skills.map((skill, index) => (
-            <SkillBadge key={index}>
-              <Font typo="badge">{skill}</Font>
-            </SkillBadge>
-          ))}
-          {languages.map((language, index) => (
-            <LanguageBadge key={`lang-${index}`}>
-              <Font typo="badge">{language}</Font>
-            </LanguageBadge>
-          ))}
-        </SkillsGrid>
-      </div>
+      <Container>
+        <SectionTitle>Skills & Languages</SectionTitle>
+        <SkillsCard>
+          <SkillsContent>
+            <h3>Technical Skills</h3>
+            <SkillList>
+              {skills.map((skill, index) => (
+                <SkillBadge key={index}>{skill}</SkillBadge>
+              ))}
+            </SkillList>
+          </SkillsContent>
+          <LanguagesContent>
+            <h3>Languages</h3>
+            <SkillList>
+              {languages.map((language, index) => (
+                <LanguageBadge key={`lang-${index}`}>{language}</LanguageBadge>
+              ))}
+            </SkillList>
+          </LanguagesContent>
+        </SkillsCard>
+      </Container>
     </Skills>
   );
 };
 
 export default SkillsSection;
 
-const Skills = styled.section`
-  padding: 4rem 0;
+const Section = styled.section`
+  padding: 64px 0;
 
   @media (max-width: 768px) {
-    padding: 3rem 0;
+    padding: 48px 0;
   }
 
   @media (max-width: 480px) {
-    padding: 2rem 0;
+    padding: 32px 0;
   }
 `;
 
-const SkillsGrid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.75rem;
+const Skills = styled(Section)`
+  background-color: ${colors.white};
+  color: ${colors.darkText};
+`;
+
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 10px;
+  }
+
+  @media (max-width: 360px) {
+    min-width: 360px;
+    padding: 0 10px;
+  }
+`;
+
+const SectionTitle = styled.h2`
+  text-align: center;
+  margin-bottom: 48px;
+  color: ${colors.black};
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 28px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 24px;
+  }
+`;
+
+const SkillsCard = styled.div`
+  background: ${colors.white};
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px ${colors.shadow};
+  border: 1px solid ${colors.borderLight};
   max-width: 800px;
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    gap: 0.5rem;
+    padding: 24px;
   }
 
   @media (max-width: 480px) {
-    gap: 0.375rem;
+    padding: 16px;
+  }
+`;
+
+const SkillsContent = styled.div`
+  margin-bottom: 32px;
+
+  h3 {
+    margin-bottom: 16px;
+    color: ${colors.darkText};
+    font-size: 20px;
+    font-weight: 600;
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
+  }
+`;
+
+const LanguagesContent = styled.div`
+  h3 {
+    margin-bottom: 16px;
+    color: ${colors.darkText};
+    font-size: 20px;
+    font-weight: 600;
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
+  }
+`;
+
+const SkillList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  @media (max-width: 768px) {
+    gap: 6px;
+  }
+
+  @media (max-width: 480px) {
+    gap: 4px;
   }
 `;
 
 const SkillBadge = styled.span`
-  background-color: ${colors.veryLightGray};
-  color: ${colors.gray};
-  padding: 0.5rem 1rem;
+  background-color: ${colors.darkText};
+  color: ${colors.white};
+  padding: 6px 12px;
   border-radius: 9999px;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background-color: ${colors.darkText};
-    color: ${colors.white};
-    transform: translateY(-2px);
-  }
+  font-size: 12px;
+  font-weight: 500;
 
   @media (max-width: 768px) {
-    padding: 0.375rem 0.75rem;
+    padding: 4px 8px;
+    font-size: 11px;
   }
 
   @media (max-width: 480px) {
-    padding: 0.25rem 0.5rem;
+    padding: 3px 6px;
+    font-size: 10px;
   }
 
   @media (max-width: 360px) {
-    padding: 0.125rem 0.375rem;
+    padding: 2px 4px;
+    font-size: 9px;
   }
 `;
 
 const LanguageBadge = styled.span`
   background-color: ${colors.borderLight};
   color: ${colors.gray};
-  padding: 0.5rem 1rem;
+  padding: 6px 12px;
   border-radius: 9999px;
   transition: all 0.3s ease;
+  font-size: 12px;
+  font-weight: 500;
 
   &:hover {
     background-color: ${colors.darkText};
@@ -124,34 +215,17 @@ const LanguageBadge = styled.span`
   }
 
   @media (max-width: 768px) {
-    padding: 0.375rem 0.75rem;
+    padding: 4px 8px;
+    font-size: 11px;
   }
 
   @media (max-width: 480px) {
-    padding: 0.25rem 0.5rem;
+    padding: 3px 6px;
+    font-size: 10px;
   }
 
   @media (max-width: 360px) {
-    padding: 0.125rem 0.375rem;
-  }
-`;
-
-const SectionTitle = styled.h2`
-  text-align: center;
-  margin-bottom: 3rem;
-  color: ${colors.black};
-
-  @media (max-width: 768px) {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
-  }
-
-  @media (max-width: 360px) {
-    font-size: 1.5rem;
+    padding: 2px 4px;
+    font-size: 9px;
   }
 `;

@@ -3,15 +3,13 @@
 import styled from "styled-components";
 import Image from "next/image";
 import { colors } from "@/styles/colors";
-import { Font } from "@/styles/Typography";
+import { Div, A } from "@/styles/BseStyledTags";
 
 export default function CompanySection() {
   return (
     <Company>
       <Container>
-        <SectionTitle>
-          <Font typo="section_title">현재 회사</Font>
-        </SectionTitle>
+        <SectionTitle>현재 회사</SectionTitle>
         <CompanyCard>
           <CompanyHeader>
             <CompanyInfo>
@@ -19,12 +17,8 @@ export default function CompanySection() {
                 <i className="fas fa-building"></i>
               </CompanyIcon>
               <CompanyInfoText>
-                <Font typo="card_title" as="h3">
-                  테크 스타트업 A
-                </Font>
-                <Font typo="caption" as="p">
-                  프론트엔드 개발자 • 2023.03 - 현재
-                </Font>
+                <h3>테크 스타트업 A</h3>
+                <p>프론트엔드 개발자 • 2023.03 - 현재</p>
               </CompanyInfoText>
             </CompanyInfo>
             <OutlineButton href="#">
@@ -32,15 +26,15 @@ export default function CompanySection() {
             </OutlineButton>
           </CompanyHeader>
           <CompanyDescription>
-            <Font typo="body_regular">
+            <p>
               핀테크 솔루션을 개발하는 스타트업으로, React 기반의 관리자
               대시보드와 고객 관리 시스템을 개발하고 있습니다. 빠른 성장과 함께
               다양한 기술적 도전을 경험하고 있습니다.
-            </Font>
+            </p>
           </CompanyDescription>
 
           <CompanyCardTitle>
-            <Font typo="card_title">주요 프로젝트</Font>
+            <h4>주요 프로젝트</h4>
           </CompanyCardTitle>
           <ProjectsGrid>
             <ProjectCard>
@@ -51,23 +45,15 @@ export default function CompanySection() {
                 height={200}
               /> */}
               <ProjectContent>
-                <Font typo="card_title" as="h5">
-                  E-commerce Dashboard
-                </Font>
-                <Font typo="body_regular" as="p">
+                <h5>E-commerce Dashboard</h5>
+                <p>
                   관리자용 대시보드로 상품 관리, 주문 처리, 통계 분석 기능을
                   제공합니다.
-                </Font>
+                </p>
                 <TechStack>
-                  <TechBadge>
-                    <Font typo="badge">React</Font>
-                  </TechBadge>
-                  <TechBadge>
-                    <Font typo="badge">TypeScript</Font>
-                  </TechBadge>
-                  <TechBadge>
-                    <Font typo="badge">Chart.js</Font>
-                  </TechBadge>
+                  <TechBadge>React</TechBadge>
+                  <TechBadge>TypeScript</TechBadge>
+                  <TechBadge>Chart.js</TechBadge>
                 </TechStack>
                 <SmallButton href="#">
                   <i className="fas fa-external-link-alt"></i> Demo
@@ -82,22 +68,14 @@ export default function CompanySection() {
                 height={200}
               /> */}
               <ProjectContent>
-                <Font typo="card_title" as="h5">
-                  고객 관리 시스템
-                </Font>
-                <Font typo="body_regular" as="p">
+                <h5>고객 관리 시스템</h5>
+                <p>
                   B2B 고객 관리를 위한 CRM 시스템의 프론트엔드를 담당했습니다.
-                </Font>
+                </p>
                 <TechStack>
-                  <TechBadge>
-                    <Font typo="badge">Next.js</Font>
-                  </TechBadge>
-                  <TechBadge>
-                    <Font typo="badge">React</Font>
-                  </TechBadge>
-                  <TechBadge>
-                    <Font typo="badge">Ant Design</Font>
-                  </TechBadge>
+                  <TechBadge>Next.js</TechBadge>
+                  <TechBadge>React</TechBadge>
+                  <TechBadge>Ant Design</TechBadge>
                 </TechStack>
                 <SmallButton href="#">
                   <i className="fas fa-external-link-alt"></i> Demo
@@ -154,49 +132,49 @@ const OutlineButton = styled(Button)`
   }
 
   @media (max-width: 480px) {
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    padding: 8px 16px;
+    font-size: 14px;
   }
 `;
 
 const SmallButton = styled(Button)`
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
 
   @media (max-width: 480px) {
-    padding: 0.375rem 0.75rem;
-    font-size: 0.75rem;
+    padding: 6px 12px;
+    font-size: 12px;
   }
 `;
 
 const Section = styled.section`
-  padding: 4rem 0;
+  padding: 64px 0;
 
   @media (max-width: 768px) {
-    padding: 3rem 0;
+    padding: 48px 0;
   }
 
   @media (max-width: 480px) {
-    padding: 2rem 0;
+    padding: 32px 0;
   }
 `;
 
 const SectionTitle = styled.h2`
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 48px;
   color: ${colors.black};
 
   @media (max-width: 768px) {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 32px;
+    margin-bottom: 32px;
   }
 
   @media (max-width: 480px) {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+    font-size: 28px;
+    margin-bottom: 32px;
   }
 
   @media (max-width: 360px) {
-    font-size: 1.5rem;
+    font-size: 24px;
   }
 `;
 
@@ -207,17 +185,17 @@ const Company = styled(Section)`
 
 const CompanyCard = styled.div`
   background: ${colors.white};
-  padding: 2rem;
-  border-radius: 1rem;
+  padding: 32px;
+  border-radius: 16px;
   box-shadow: 0 4px 6px -1px ${colors.shadow};
   border: 1px solid ${colors.borderLight};
 
   @media (max-width: 768px) {
-    padding: 1.5rem;
+    padding: 24px;
   }
 
   @media (max-width: 480px) {
-    padding: 1rem;
+    padding: 16px;
   }
 `;
 
@@ -225,11 +203,11 @@ const CompanyHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 24px;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
     align-items: flex-start;
   }
 `;
@@ -237,39 +215,39 @@ const CompanyHeader = styled.div`
 const CompanyInfo = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 16px;
 `;
 
 const CompanyIcon = styled.div`
-  width: 4rem;
-  height: 4rem;
+  width: 64px;
+  height: 64px;
   background-color: ${colors.darkText};
-  border-radius: 0.75rem;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
 
   i {
-    font-size: 2rem;
+    font-size: 32px;
     color: ${colors.white};
   }
 
   @media (max-width: 480px) {
-    width: 3rem;
-    height: 3rem;
+    width: 48px;
+    height: 48px;
 
     i {
-      font-size: 1.5rem;
+      font-size: 24px;
     }
   }
 `;
 
 const CompanyInfoText = styled.div`
   h3 {
-    margin-bottom: 0.25rem;
+    margin-bottom: 4px;
 
     @media (max-width: 480px) {
-      font-size: 1rem;
+      font-size: 16px;
     }
   }
 
@@ -277,32 +255,32 @@ const CompanyInfoText = styled.div`
     color: ${colors.lightText};
 
     @media (max-width: 480px) {
-      font-size: 0.75rem;
+      font-size: 12px;
     }
   }
 `;
 
 const CompanyDescription = styled.div`
   color: ${colors.lightText};
-  margin-bottom: 2rem;
+  margin-bottom: 32px;
 
   @media (max-width: 480px) {
-    font-size: 0.75rem;
+    font-size: 12px;
   }
 `;
 
 const CompanyCardTitle = styled.h4`
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 
   @media (max-width: 480px) {
-    font-size: 1rem;
+    font-size: 16px;
   }
 `;
 
 const ProjectsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 32px;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -311,7 +289,7 @@ const ProjectsGrid = styled.div`
 
 const ProjectCard = styled.div`
   background: ${colors.white};
-  border-radius: 1rem;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 6px -1px ${colors.shadow};
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -331,56 +309,56 @@ const ProjectImage = styled(Image)`
 `;
 
 const ProjectContent = styled.div`
-  padding: 1.5rem;
+  padding: 24px;
 
   h5 {
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
 
     @media (max-width: 480px) {
-      font-size: 1rem;
+      font-size: 16px;
     }
   }
 
   p {
     color: ${colors.lightText};
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 
     @media (max-width: 480px) {
-      font-size: 0.75rem;
+      font-size: 12px;
     }
   }
 
   @media (max-width: 768px) {
-    padding: 1rem;
+    padding: 16px;
   }
 
   @media (max-width: 480px) {
-    padding: 0.75rem;
+    padding: 12px;
   }
 `;
 
 const TechStack = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: 8px;
+  margin-bottom: 16px;
 
   @media (max-width: 480px) {
-    gap: 0.25rem;
+    gap: 4px;
   }
 `;
 
 const TechBadge = styled.span`
   background-color: ${colors.darkText};
   color: ${colors.white};
-  padding: 0.25rem 0.75rem;
+  padding: 4px 12px;
   border-radius: 9999px;
 
   @media (max-width: 480px) {
-    padding: 0.125rem 0.5rem;
+    padding: 2px 8px;
   }
 
   @media (max-width: 360px) {
-    padding: 0.125rem 0.375rem;
+    padding: 2px 6px;
   }
 `;

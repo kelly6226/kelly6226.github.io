@@ -43,28 +43,4 @@ export const colors = {
   hoverGray: "#e5e7eb",
 };
 
-// CSS 변수로 내보내기
-// export const cssVariables = `
-//   :root {
-//     --color-white: ${colors.white};
-//     --color-black: ${colors.black};
-
-//     --color-blue: ${colors.blue};
-//     --color-gray: ${colors.gray};
-//     --color-light-gray: ${colors.lightGray};
-//     --color-very-light-gray: ${colors.veryLightGray};
-//     --color-lighter-gray: ${colors.lighterGray};
-
-//     --color-bg-white: ${colors.bgWhite};
-//     --color-bg-light: ${colors.bgLight};
-
-//     --color-border-light: ${colors.borderLight};
-//     --color-border-medium: ${colors.borderMedium};
-
-//     --color-social-blue: ${colors.socialBlue};
-//     --color-social-dark-blue: ${colors.socialDarkBlue};
-//     --color-social-bg: ${colors.socialBg};
-//   }
-// `;
-
 export default colors;

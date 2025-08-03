@@ -15,32 +15,6 @@ body {
     background-color: #ffffff;
 }
 
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 0 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 10px;
-    }
-}
-
-@media (max-width: 360px) {
-    .container {
-        min-width: 360px;
-        padding: 0 10px;
-    }
-}
-
 /* Animations */
 @keyframes fadeInUp {
     from {

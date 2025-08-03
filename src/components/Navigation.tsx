@@ -52,43 +52,43 @@ const Navbar = styled.nav`
 const NavContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 20px;
+  padding: 16px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media (max-width: 768px) {
-    padding: 0.75rem 15px;
+    padding: 12px 15px;
   }
 
   @media (max-width: 480px) {
-    padding: 0.5rem 10px;
+    padding: 8px 10px;
   }
 
   @media (max-width: 360px) {
     min-width: 360px;
-    padding: 0.5rem 10px;
+    padding: 8px 10px;
   }
 `;
 
 const NavLogo = styled.h1`
-  font-size: 1.5rem;
+  font-size: 24px;
   font-weight: bold;
   color: ${colors.black};
 
   @media (max-width: 768px) {
-    font-size: 1.25rem;
+    font-size: 20px;
   }
 
   @media (max-width: 480px) {
-    font-size: 1.125rem;
+    font-size: 18px;
   }
 `;
 
 const NavMenu = styled.ul`
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 32px;
 
   @media (max-width: 768px) {
     display: none;
