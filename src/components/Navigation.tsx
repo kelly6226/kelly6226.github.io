@@ -18,19 +18,13 @@ const Navigation = () => {
             <NavLink href="#skills">Skills</NavLink>
           </li>
           <li>
-            <NavLink href="#company">Company</NavLink>
-          </li>
-          <li>
-            <NavLink href="#projects">Projects</NavLink>
-          </li>
-          <li>
-            <NavLink href="#education">Education</NavLink>
+            <NavLink href="#working">Working</NavLink>
           </li>
           <li>
             <NavLink href="#activities">Activities</NavLink>
           </li>
           <li>
-            <NavLink href="#contact">Contact</NavLink>
+            <NavLink href="#projects">Projects</NavLink>
           </li>
         </NavMenu>
       </NavContainer>
