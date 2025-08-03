@@ -11,6 +11,7 @@ import ExtraInfo from "./about/ExtraInfo";
 const AboutSection = () => {
   return (
     <CenterColumn
+      id="about"
       p={{ zero: "64px 20px", md: "32px 30px" }}
       maxWidth="1200px"
       margin="0 auto"

@@ -11,7 +11,6 @@ const { colors } = BasicTheme;
 const ProfileSection = () => {
   return (
     <Container
-      id="about"
       width="100vw"
       p={{ zero: "80px 0 32px", md: "128px 0 64px" }}
       textAlign="center"
