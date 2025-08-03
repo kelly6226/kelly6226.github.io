@@ -34,9 +34,13 @@ const ProfileSection = () => {
           margin="0 auto 32px"
           opacity="0.8"
         >
-          사용자 경험을 중시하며, 깔끔하고 효율적인 코드를 작성하는 것을
-          좋아합니다. <br /> 새로운 기술을 배우고 적용하는 것에 열정을 가지고
-          있습니다.
+          언제나 사용자의 입장에서 생각하며{" "}
+          <Span style={{ fontWeight: 700 }}>편리한 인터페이스</Span>
+          를 설계하려고 노력합니다. <br />
+          <Span style={{ fontWeight: 700 }}>
+            재사용 가능한 코드와 체계적인 문서화
+          </Span>
+          로 빠르면서도 완성도 높은 결과를 추구합니다.
         </P>
         <CenterRow
           gridGap="16px"
