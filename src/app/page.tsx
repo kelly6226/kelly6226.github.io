@@ -6,7 +6,6 @@ import AboutSection from "@/components/About";
 import SkillsSection from "@/components/Skills";
 import CompanySection from "@/components/Company";
 import ActivitiesSection from "@/components/Activities";
-import FooterSection from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
       <SkillsSection />
       <CompanySection />
       <ActivitiesSection />
-      <FooterSection />
     </>
   );
 }
