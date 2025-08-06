@@ -5,6 +5,14 @@ import ThemeWrapper from "@/components/ThemeWrapper";
 export const metadata: Metadata = {
   title: "jisoo portfolio",
   description: "프론트엔드 개발자 신지수입니다.",
+  openGraph: {
+    title: "jisoo portfolio",
+    description: "프론트엔드 개발자 신지수입니다.",
+  },
+  icons: {
+    icon: "/metaImg.png",
+    apple: "/metaImg.png",
+  },
 };
 
 export default function RootLayout({
