@@ -1,10 +1,13 @@
-import type { NextConfig } from "next";
+// next.config.js
+const isProd = process.env.NODE_ENV === "production";
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  serverExternalPackages: ["styled-components"],
+  output: "export",
+  basePath: isProd ? "/portfolio" : "",
+  assetPrefix: isProd ? "/portfolio/" : "",
 };
 
 export default nextConfig;

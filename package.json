@@ -2,12 +2,13 @@
   "name": "kelly6226.github.io",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "export": "next export",
+  "deploy": "next build && next export && gh-pages -d out",
+  "lint": "next lint"
+},
   "dependencies": {
     "@types/styled-components": "^5.1.34",
     "next": "15.4.5",
