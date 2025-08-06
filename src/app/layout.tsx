@@ -10,8 +10,8 @@ export const metadata: Metadata = {
     description: "프론트엔드 개발자 신지수입니다.",
   },
   icons: {
-    icon: "/metaImg.png",
-    apple: "/metaImg.png",
+    icon: "/portfolio/metaImg.png",
+    apple: "/portfolio/metaImg.png",
   },
 };
 

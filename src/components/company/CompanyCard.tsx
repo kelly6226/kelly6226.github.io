@@ -19,7 +19,9 @@ export default function CompanyCard() {
       >
         <Row gridGap="16px" alignItems="center">
           <Image
-            src="/bigcLogo.png"
+            src={`${
+              process.env.NODE_ENV === "production" ? "/portfolio" : ""
+            }/bigcLogo.png`}
             alt="bigc logo"
             width={100}
             height={100}

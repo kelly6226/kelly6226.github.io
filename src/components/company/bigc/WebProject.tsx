@@ -1,10 +1,9 @@
 "use client";
 
 import styled from "styled-components";
-import Image from "next/image";
 import BasicTheme from "@/styles/breakpoints";
-import { Div, A, H2, H3, P, Button, H4, H5 } from "@/styles/BaseStyledTags";
-import { CenterColumn, Column, Grid, Row } from "@/styles/BaseComponents";
+import { Div, H5 } from "@/styles/BaseStyledTags";
+import { Grid } from "@/styles/BaseComponents";
 import ProjectCard from "../ProjectCard";
 
 const { colors } = BasicTheme;

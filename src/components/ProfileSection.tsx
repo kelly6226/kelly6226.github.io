@@ -19,7 +19,9 @@ const ProfileSection = () => {
       <Content p={{ zero: "16px", md: "32px" }} width="100%">
         <CenterRow mb="32px" width="180px" height="180px">
           <ProfileImg
-            src="/jisooProfile.jpeg"
+            src={`${
+              process.env.NODE_ENV === "production" ? "/portfolio" : ""
+            }/jisooProfile.jpeg`}
             alt="Profile"
             width={180}
             height={180}

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Image from "next/image";
 import BasicTheme from "@/styles/breakpoints";
 import { H5 } from "@/styles/BaseStyledTags";
 import { Column } from "@/styles/BaseComponents";

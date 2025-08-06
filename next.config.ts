@@ -1,13 +1,15 @@
-// next.config.js
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
+  output: "export",
   compiler: {
     styledComponents: true,
   },
-  output: "export",
+  images: {
+    unoptimized: true,
+  },
   basePath: isProd ? "/portfolio" : "",
-  assetPrefix: isProd ? "/portfolio/" : "",
+  assetPrefix: isProd ? "https://kelly6226.github.io/portfolio" : "",
 };
 
 export default nextConfig;
